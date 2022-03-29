@@ -14,12 +14,13 @@ const userSchema = new Schema({
     caloriesGoal: { type: Number },
   
     caloriesIntake: [{
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Calories'
 
     }],
+
     waterIntake: [{
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Water'
     }]
 
