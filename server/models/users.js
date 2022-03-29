@@ -3,9 +3,12 @@ const { Schema } = mongoose
 
 const userSchema = new Schema({
     name: { type: String, required: true },
+    email: { type: String, required: true},
+    pin: { type: String, required: true},
     gender: { type: String, required: true },
     weight: { type: Number, required: true },
     height: { type: Number, required: true },
+    isPrivate: false,
     activeness: { type: String, required: true},
     waterGoal: { type: Number},
     caloriesGoal: { type: Number },
@@ -19,7 +22,6 @@ const userSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Water'
     }]
- 
 
 })
 
