@@ -3,9 +3,12 @@
 After Cloning:
 1. run npm init
 
-Front End Code Reside in "health_buddy" folder
+    Front End Code Reside in "health_buddy" folder
 
-Back End Code Reside in "server" folder
+    Back End Code Reside in "server" folder
+
+2.  Setup Mongo, Mongoose, and .env file for backend
+
 
 User API:
 
@@ -33,3 +36,21 @@ User API:
     - end point: 'users/id/remove'
     - require _id of the user account
     - permanently remove the user account
+
+6. POST Record Water Intake
+    - end point: 'users/water/id'
+    - require "amount" of water in oz
+    - "time" can be specified or leave blank for default
+
+7. GET Retrieve Water Intake Record
+    - end point: 'users/water/id&timePeriod'
+    - timePeriod can be 0 to retrieve all record
+
+8. POST Record Calories Intake
+    - end point: 'users/calories/id'
+    - require: food, amountOfFood, amountOfCalories
+    - dateTime is optional, wil just default to current date time if not specified
+
+9. GET Retrieve Calories Intake Record
+    - end point: 'users/calories/id&timePeriod'
+    - timePeriod can be 0 to retrieve all record

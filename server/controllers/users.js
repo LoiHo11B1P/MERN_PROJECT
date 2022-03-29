@@ -66,6 +66,7 @@ user.put('/:id/update', async(req, res) => {
     
 })
 
+// DELETE USER
 user.delete('/:id/remove', async(req, res) => {
     if(req.params.id) {
         try{
@@ -86,7 +87,7 @@ user.delete('/:id/remove', async(req, res) => {
     }
 })
 
-// Input water
+// INPUT WATER
 user.post('/water/:id', async(req, res) => {
     try {
         const currentUser = await db.User.findById(req.params.id)
