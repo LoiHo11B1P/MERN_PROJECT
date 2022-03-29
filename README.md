@@ -11,6 +11,7 @@ After Cloning:
 
 
 User API:
+    Api will return an json object containning "success", "message", and "data". "data" containing the information.
 
 1. GET Retrieve All User 
     - end point: 'users/' 

@@ -112,12 +112,12 @@ user.post('/water/:id', async(req, res) => {
 
 // Get A List of Water
 user.get('/water/:id&:timePeriod', async (req, res) => {
-    
+    console.log(req.params.timePeriod)
     try {
         db.User.findById(req.params.id)
         .populate({
             path: "waterIntake",
-            match: { dateTime: {$gte: req.params.timePeriod} }
+            match: { time: {$gte: req.params.timePeriod} }
         })
         .then(water => {
             res.status(200).json({
