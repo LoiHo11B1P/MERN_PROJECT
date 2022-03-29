@@ -11,7 +11,7 @@ user.get('/', async(req, res) => {
                 {isPrivate: false},
                 {isPrivate: undefined}
             ]
-        })
+        }).select('-_id -pin -email -isPrivate')
         res.status(200).json({
             success: true,
             message: 'Retrieved all non-private user information.', 
@@ -55,7 +55,6 @@ user.post('/login', async(req, res) => {
 // CREATE NEW USER
 user.post('/', async(req, res) => {
 
-   
     try {
         const newUser = await db.User.create(req.body)
         res.status(200).json({
@@ -66,7 +65,6 @@ user.post('/', async(req, res) => {
     } catch (error) {
         res.status(500).json(error)
     }
-    
 
 })
 
