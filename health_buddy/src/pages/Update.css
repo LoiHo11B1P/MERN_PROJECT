@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.background {
+    background-repeat: no-repeat;
+    background-image: url(../images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 132, 255, 0.63);
+    box-shadow: 1px 6px silver;    
+    text-align: center;
+
+}
+
+.navbar a {
+    font-size: 25px;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+.profile-logo {
+    border-color: red;
+    border-style: dotted;
+    height: 200px;
+    width: 600px;
+    background-image: url(../images/hb-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 5%;
+    Left: 50%;
+    transform: translate( -50%, -5% );
+
+}
+
+.update-editor {
+    /* border-style: dotted;
+    border-color: red; */
+    width: 700px;
+    height: 450px;
+    background-color: white;
+    position: absolute;
+    top: 70%;
+    Left: 50%;
+    transform: translate( -50%, -70% );
+}
