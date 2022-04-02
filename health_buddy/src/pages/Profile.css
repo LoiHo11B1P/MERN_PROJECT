@@ -12,54 +12,61 @@
     height: 100vh;
 }
 
-.navbar {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 132, 255, 0.63);
-    box-shadow: 1px 6px silver;    
-    text-align: center;
-
-}
-
-.navbar a {
-    font-size: 25px;
-    color: black;
-    font-weight: bolder;
-    text-decoration: none;
-}
 
 .profile-layout {
     /* border-color: red;
     border-style: dotted; */
     width: 1200px;
-    height: 100vh;
+    height: 650px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     top: 80%;
     Left: 50%;
     transform: translate( -50%, -80% );
+    
+}
 
+.vl-1 {
+    border-left: 2px solid rgb(192, 192, 192);
+    height: 650px;
+    position: absolute;
+    top: 80%;
+    Left: 26%;
+    transform: translate( -26%, -80% );
 }
 
 
-.profile-container {
-    width: 300px;
-    height: 600px;
+
+.welcome-user {
+    width: 600px;
+    height: 75px;
+    color: black;
     position: absolute;
-    top: 20%;
+    top: 0%;
+    Left: 40%;
+    transform: translate( -50%, 0% );
+    text-align: center;
+    padding-top: 2%;
+}
+
+.profile-container {
+    border-color: red;
+    /* border-style: dotted; */
+    width: 312px;
+    height: 650px;
+    background-color: rgb(83, 81, 219);
+    position: absolute;
+    top: 80%;
     Left: 0%;
-    transform: translate( 0%, -20% );
+    transform: translate( 0%, -80% );
 
 
 }
 
 .profile-icon {
-    border-color: black;
-    border-style: solid;
-    border-radius: 100px;
     width: 150px;
     height: 150px;
-    background-image: url(../images/profile-user.png);
+    background-image: url(../images/profile-icon.png);
     background-size: cover;
     position: absolute;
     top: 5%;
@@ -67,72 +74,148 @@
     transform: translate( -50%, -5% );
 }
 
-.my-profile-text {
-    border-style: dotted;
-    border-color: red;
-    width: 200px;
-    height: 20px;
-    position: absolute;
-    top: 32%;
-    Left: 50%;
-    transform: translate( -50%, -5% );
-}
 
 h1 {
     font-size: 14px;
     text-align: center;
-    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding-top: 2%;
 }
 
-.profile-body {
-    border-color: red;
-    border-style: dotted;
-    color: black;
-    font-size: 12px;
+.user-profile {
+    width: auto;
+    height: 40px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    width: 250px;
-    height: 300px;
+    color: white;
+    font-weight: 700;
     position: absolute;
-    top: 45%;
+    top: 27%;
     Left: 50%;
     transform: translate( -50%, -10% );
 }
 
-.profile-logo {
-    border-color: red;
-    border-style: dotted;
-    height: 200px;
-    width: 600px;
-    background-image: url(../images/hb-logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 5%;
-    Left: 50%;
-    transform: translate( -50%, -5% );
 
+.profile-body {
+    background-color: rgb(41, 37, 63);
+    font-size: 12px;
+    text-align: center;
+    width: 312px;
+    height: 430px;
+    position: absolute;
+    top: 100%;
+    Left: 50%;
+    transform: translate( -50%, -100% );
 }
 
-.user-feed-box {
-    border: black;
-    border-style: dotted;
-    width: 600px;
-    height: 600px;
+.profile-body h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: white;
+    line-height: 2.5;
+    padding-left: 10%;
+}
+
+.update-button {
     position: absolute;
     top: 80%;
     Left: 50%;
     transform: translate( -50%, -80% );
 }
 
-.trackers {
-    width: 300px;
-    height: 600px;
-    background-color: none;
-    position: absolute;
-    top: 80%;
-    Left: 82%;
-    transform: translate( -82%, -80% );
 
+.profile-logo {
+    /* border-color: red;
+    border-style: dotted; */
+    height: 110px;
+    width: 600px;
+    background-image: url(../images/hb-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0%;
+    Left: 50%;
+    transform: translate( -50%, -10% );
 
 }
+
+.user-feed-box {
+    /* border: black;
+    border-style: dotted; */
+    width: 578px;
+    height: 577px;
+    position: absolute;
+    top: 97%;
+    Left: 50%;
+    transform: translate( -50%, -100% );
+}
+
+.feed-heading {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top: 3%;
+    Left: 17%;
+    transform: translate( -20%, 0% ); 
+}
+
+.feed-heading h1{
+    color: black;
+    font-size: 30px;
+    
+}
+
+.daily-tracker {
+    border-style: dotted;
+    border-color: black;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    Left: 20%;
+    transform: translate( -20%, -30% );  
+    
+}
+
+.daily-tracker h1 {
+    color: black;
+}
+
+.water-form {
+    position: absolute;
+    top: 90%;
+    Left: 20%;
+    transform: translate( -20%, -90% );   
+}
+
+.calories-form {
+    position: absolute;
+    top: 90%;
+    Left: 35%;
+    transform: translate( 60%, -90% );
+}
+
+/*  */
+
+button {
+    background-color: rgb(83, 81, 219);
+    border-radius: 30px;
+    border-style: none;
+    margin-top: 10px;
+    color: white;
+    font-weight: bolder;
+    box-shadow: 1px 2px silver;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+

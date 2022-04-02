@@ -29,22 +29,6 @@
 }
 
 
-.profile-logo {
-    border-color: red;
-    border-style: dotted;
-    height: 200px;
-    width: 600px;
-    background-image: url(../images/hb-logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 5%;
-    Left: 50%;
-    transform: translate( -50%, -5% );
-
-}
-
 .update-editor {
     /* border-style: dotted;
     border-color: red; */
