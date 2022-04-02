@@ -72,7 +72,7 @@ input {
 }
 
 input[type=submit] {
-    background: linear-gradient(100deg, rgb(47, 0, 255), rgb(47, 0, 255));
+    background-color: rgb(83, 81, 219);
     border-radius: 30px;
     border-style: none;
     margin-top: 10px;
@@ -80,6 +80,7 @@ input[type=submit] {
     font-weight: bolder;
     box-shadow: 1px 5px silver;
     cursor: pointer;
+    
 }
 
 #loginMessage {

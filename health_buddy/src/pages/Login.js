@@ -60,6 +60,7 @@ function App() {
                     { loginMessage }
                 </p>
                 <form className="form" onSubmit={ onLogin }>
+                    Email:
                     <input
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -68,6 +69,7 @@ function App() {
                         required
                     />
                     <br />
+                    Password:
                     <input
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}

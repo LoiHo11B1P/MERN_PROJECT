@@ -70,13 +70,15 @@ function App() {
       <div className="container" >
         <h1 className="Heading">Sign up</h1>
         <form className="form" onSubmit={ signUp }>
+          Name:
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
             type="text"
-            placeholder="Name"
+            placeholder="First , Last"
           />
           <br />
+          Email:
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -84,6 +86,7 @@ function App() {
             placeholder="Email"
           />
           <br />
+          Password:
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -91,46 +94,52 @@ function App() {
             placeholder="Password"
           />
           <br /> 
+          Gender:
           <input
             value={gender}
             onChange={(e) => setGender(e.target.value)}
             type="text"
             placeholder="Gender"
           />
-          <br /> 
+          <br />
+          Weight: 
           <input
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
             type="text"
-            placeholder="Weight"
+            placeholder="Ex:(140lbs)"
           />
           <br /> 
+          Height:
           <input
             value={height}
             onChange={(e) => setHeight(e.target.value)}
             type="text"
-            placeholder="Height"
+            placeholder="Ex:(70inches)"
           />
           <br /> 
+          Avtiveness:
           <input
             value={activeness}
             onChange={(e) => setActiveness(e.target.value)}
             type="text"
-            placeholder="Activeness"
+            placeholder="Description"
           />
           <br /> 
+          Daily Water Goal:
           <input
             value={waterGoal}
             onChange={(e) => setWaterGoal(e.target.value)}
             type="text"
-            placeholder="WaterGoal"
+            placeholder="How many ounces?"
           />
           <br /> 
+          Daily Calories Goal:
           <input
             value={caloriesGoal}
             onChange={(e) => setCaloriesGoal(e.target.value)}
             type="text"
-            placeholder="CaloriesGoal"
+            placeholder="How many calories?"
           />
           <br /> 
           <h3> Already have an account? 
