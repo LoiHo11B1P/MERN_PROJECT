@@ -8,8 +8,8 @@ function App () {
 
   const { user, setUser } = useContext(UserContext)
   
-  const [name, setName] =useState('')
-  const [email, setEmail] =useState('')
+  const [name, setName] =useState(user.name)
+  const [email, setEmail] =useState(user.email)
   const [password, setPassword] =useState('')  
   const [gender, setGender] =useState('')
   const [weight, setWeight] =useState('')
@@ -19,13 +19,13 @@ function App () {
   const [waterGoal, setWaterGoal] =useState('')
   const [caloriesGoal, setCaloriesGoal] =useState('')
   
-  const signUp = async (e) => {
+  const update = async (e) => {
     e.preventDefault()
   
-    const url = 'https://frozen-plateau-93848.herokuapp.com/users/'
+    const url = `https://frozen-plateau-93848.herokuapp.com/users/${user._id}/update` 
     const response = await fetch(url, 
       {
-        method: 'POST',
+        method: 'PUT',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
@@ -62,16 +62,6 @@ function App () {
   
   }
   
-    return (
-      <div className="background">
-        <div className="profile-logo"></div>
-
-        <div className="navbar">
-            <a href="">Make an update</a>
-            <a href="">Settings</a>
-        </div>
-
-        <div className="update-editor">
         
 return (
   <div className="body">
@@ -80,19 +70,19 @@ return (
     </div>
     <div className="container" >
       <h1 className="Heading">Update Profile</h1>
-      <form className="form" onSubmit={ signUp }>
+      <form className="form" onSubmit={ update }>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
           placeholder="Name"
-          defaultValue={ user.name }
+          
         />
         <br />
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          type="text"
+          type="email"
           placeholder="Email"
         />
         <br />
@@ -113,14 +103,14 @@ return (
         <input
           value={weight}
           onChange={(e) => setWeight(e.target.value)}
-          type="text"
+          type="number"
           placeholder="Weight"
         />
         <br /> 
         <input
           value={height}
           onChange={(e) => setHeight(e.target.value)}
-          type="text"
+          type="number"
           placeholder="Height"
         />
         <br /> 
@@ -154,9 +144,7 @@ return (
     </div>
   </div>
 )
-        </div>
-      </div>
-    );
+
 
 }
   
