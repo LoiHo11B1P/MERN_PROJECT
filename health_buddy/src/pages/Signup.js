@@ -1,18 +1,66 @@
-import {useState} from 'react'
+import {useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Signup.css'
-
+import { UserContext } from "../contexts/UserContext";
 function App() {
+
+  const navigate = useNavigate();
+
+  const { setUser } = useContext(UserContext)
+
   const [name, setName] =useState('')
   const [email, setEmail] =useState('')
   const [password, setPassword] =useState('')  
   const [gender, setGender] =useState('')
   const [weight, setWeight] =useState('')
   const [height, setHeight] =useState('')
+  const [isPrivate, setIsPrivate] =useState(false)
   const [activeness, setActiveness] =useState('')
   const [waterGoal, setWaterGoal] =useState('')
   const [caloriesGoal, setCaloriesGoal] =useState('')
 
+  const signUp = async (e) => {
+    e.preventDefault()
 
+    const url = 'https://frozen-plateau-93848.herokuapp.com/users/'
+    const response = await fetch(url, 
+      {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(
+          {
+            name: name,
+            email: email,
+            pin: password,
+            gender: gender,
+            weight: weight,
+            height: height,
+            isPrivate: isPrivate,
+            activeness: activeness,
+            waterGoal: waterGoal,
+            caloriesGoal: caloriesGoal 
+          }
+        )
+      }
+    )
+
+    const result = await response.json();
+
+    if(result && result.success) {
+      console.log(result.data)
+      setUser(result.data)
+      navigate("/")
+
+    } else {
+
+      console.log(result.message)
+
+    }
+
+  }
 
   return (
     <div className="body">
@@ -21,7 +69,7 @@ function App() {
       </div>
       <div className="container" >
         <h1 className="Heading">Sign up</h1>
-        <form className="form">
+        <form className="form" onSubmit={ signUp }>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}

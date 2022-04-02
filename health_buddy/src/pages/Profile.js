@@ -1,9 +1,22 @@
-import React from 'react';
+import { useState, useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 import './Profile.css'
 import pic from '../images/profile-user.png'
-
+import  { UserContext } from "../contexts/UserContext";
 
 function App () {
+
+    const navigate = useNavigate();
+
+    const { user, setUser } = useContext(UserContext)
+
+    useEffect(() => {
+        if(!user) {
+            navigate('/login')
+        }
+    },[user, navigate])
+    
+
     return (
         <div className="background">
             <div className="profile-logo">
@@ -23,21 +36,21 @@ function App () {
 
                     <div className="my-profile-text">
                         <h1>
-                            My Profile
+                            { user.name }
                         </h1>
                     </div>
 
                     <div className="profile-body">
                         <h2>
-                            My gender
+                            Gender: { user.gender}
                             <br />
-                            My weight
+                            Weight: { user.weight } lbs
                             <br />
-                            My height
+                            Height: { user.height } inches
                             <br />
-                            My watergoal
+                            Water Goal:{ user.waterGoal } oz
                             <br />
-                            My caloriegoal
+                            Calories Goal: { user.caloriesGoal } cals
                         </h2>
                     </div>
                 </div>

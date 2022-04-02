@@ -81,3 +81,10 @@ input[type=submit] {
     box-shadow: 1px 5px silver;
     cursor: pointer;
 }
+
+#loginMessage {
+    
+    text-align: center;
+    margin: 0 auto;
+    color: red;
+}
