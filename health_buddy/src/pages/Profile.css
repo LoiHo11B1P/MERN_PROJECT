@@ -115,7 +115,8 @@ h1 {
 }
 
 .user-feed-box {
-    
+    border: black;
+    border-style: dotted;
     width: 600px;
     height: 600px;
     position: absolute;
