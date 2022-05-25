@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.53d73ffa.css",
+    "main.js": "/static/js/main.18ecbe25.js",
+    "static/media/background.jpg": "/static/media/background.e81de8044908eb52341e.jpg",
+    "static/media/hb-logo.png": "/static/media/hb-logo.2fe72b8c96854287453e.png",
+    "static/media/profile-user.png": "/static/media/profile-user.847b30c8c1baf47a00f8.png",
+    "index.html": "/index.html",
+    "main.53d73ffa.css.map": "/static/css/main.53d73ffa.css.map",
+    "main.18ecbe25.js.map": "/static/js/main.18ecbe25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53d73ffa.css",
+    "static/js/main.18ecbe25.js"
+  ]
+}

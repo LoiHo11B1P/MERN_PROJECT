@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 const { Schema } = mongoose 
 
 const userSchema = new Schema({
@@ -8,7 +8,7 @@ const userSchema = new Schema({
     gender: { type: String, required: true },
     weight: { type: Number, required: true },
     height: { type: Number, required: true },
-    isPrivate: false,
+    isPrivate: {type: Boolean, default: false},
     activeness: { type: String, required: true},
     waterGoal: { type: Number},
     caloriesGoal: { type: Number },

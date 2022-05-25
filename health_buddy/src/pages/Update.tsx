@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import {useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Update.css'
 import { UserContext } from "../contexts/UserContext";
+import React from 'react';
 
 function App () {
   const navigate = useNavigate();
@@ -14,12 +16,12 @@ function App () {
   const [gender, setGender] =useState('')
   const [weight, setWeight] =useState('')
   const [height, setHeight] =useState('')
-  const [isPrivate, setIsPrivate] =useState(false)
+  const [isPrivate] =useState(false)
   const [activeness, setActiveness] =useState('')
   const [waterGoal, setWaterGoal] =useState('')
   const [caloriesGoal, setCaloriesGoal] =useState('')
   
-  const signUp = async (e) => {
+  const signUp = async (e: { preventDefault: () => void; }) => {
     e.preventDefault()
   
     const url = 'https://frozen-plateau-93848.herokuapp.com/users/'

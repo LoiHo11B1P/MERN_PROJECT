@@ -1,8 +1,8 @@
-const express = require('express')
+import express from 'express'
+
 const user = express.Router()
 
-const db = require('../models')
-
+const db =  require('../models')
 
 
 // LOGIN USING EMAIL AND PIN
@@ -111,7 +111,7 @@ user.post('/water/:id', async(req, res) => {
 })
 
 // Get A List of Water
-user.get('/water/:id&:timePeriod', async (req, res) => {
+user.get('/water/:id&:timePeriod', async (req: any, res: any) => {
     console.log(req.params.timePeriod)
     try {
         db.User.findById(req.params.id)
@@ -119,7 +119,7 @@ user.get('/water/:id&:timePeriod', async (req, res) => {
             path: "waterIntake",
             match: { time: {$gte: req.params.timePeriod} }
         })
-        .then(water => {
+        .then((water: any) => {
             res.status(200).json({
                 success: true,
                 message: `Retrieve water recorded.`,
@@ -161,7 +161,7 @@ user.post('/calories/:id', async(req, res) => {
 })
 
 // Get A List of Calories
-user.get('/calories/:id&:timePeriod', async (req, res) => {
+user.get('/calories/:id&:timePeriod', async (req: any, res: any) => {
     
     try {
         db.User.findById(req.params.id)
@@ -169,7 +169,7 @@ user.get('/calories/:id&:timePeriod', async (req, res) => {
             path: "caloriesIntake",
             match: { dateTime: {$gte: req.params.timePeriod} }
         })
-        .then(calories => {
+        .then((calories: any ) => {
             res.status(200).json({
                 success: true,
                 message: `Retrieve calories recorded.`,

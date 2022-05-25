@@ -2,6 +2,8 @@ import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 import { UserContext } from "../contexts/UserContext";
+import React from 'react';
+
 
 function App() {
 
@@ -12,10 +14,10 @@ function App() {
     
     const { setUser } = useContext(UserContext)
 
-    const [ loginMessage, setLoginMessage ] = useState()
+    const [ loginMessage, setLoginMessage ] = useState('')
 
     // login
-    const onLogin = e => {
+    const onLogin = (e: { preventDefault: () => void; }) => {
         e.preventDefault()
 
         attemptLogin(email, password)
@@ -23,7 +25,7 @@ function App() {
     }
 
     // contact api to login
-    const attemptLogin = async(email, pin) => {
+    const attemptLogin = async(email: string, pin: string) => {
         const url = 'https://frozen-plateau-93848.herokuapp.com/users/login'
         let response = await fetch(url,
             {
@@ -50,6 +52,7 @@ function App() {
         }
         
     }
+
   
     return (
         <div className="body">

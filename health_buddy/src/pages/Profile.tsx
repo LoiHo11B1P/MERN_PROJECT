@@ -1,14 +1,16 @@
-import { useState, useContext, useEffect } from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './Profile.css'
-import pic from '../images/profile-user.png'
 import  { UserContext } from "../contexts/UserContext";
+import React from 'react';
+
 
 function App () {
 
     const navigate = useNavigate();
 
-    const { user, setUser } = useContext(UserContext)
+    const { user } = useContext(UserContext)
 
     useEffect(() => {
         if(!user) {
@@ -25,8 +27,8 @@ function App () {
 
             <div className="profile-layout">
                 <div className="navbar">
-                    <a href="">Make an update</a>
-                    <a href="">Settings</a>
+                    <a href="#">Make an update</a>
+                    <a href="#">Settings</a>
                 </div>
 
                 <div className="profile-container">
