@@ -13,6 +13,12 @@ const PORT = process.env.PORT || 3001
 app.use(cors());
 app.use(express.json()); // to parse request body json
 
+// serve static front end in production mode
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, 'client', 'build')));
+}
+
+
 // Mongoose
 mongoose.connect(process.env.MONGO_URI!, {}, 
     () => { console.log('connected to mongo on 3001 ') }
