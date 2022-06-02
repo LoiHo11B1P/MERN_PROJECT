@@ -1,4 +1,9 @@
-# MERN_PROJECT
+# MERN_PROJECT - HEALTH BUDDY
+
+# DESCRIPTION
+Full-stack application to assist health concious individual keep track of his or her calories and water intake. This aimed at promoting a healthy live style choice by making the process of calories counting and staying hydrate at the user finger tip.
+
+# INSTRUCTION
 
 After Cloning:
 1. run npm init
@@ -9,6 +14,12 @@ After Cloning:
 
 2.  Setup Mongo, Mongoose, and .env file for backend
 
+# TECH STACK
+1. Front-end with React
+2. Back-end with Node and Express
+3. Database using MongoDB
+
+# API 
 
 User API:
     Api will return an json object containning "success", "message", and "data". "data" containing the information.
@@ -55,3 +66,10 @@ User API:
 9. GET Retrieve Calories Intake Record
     - end point: 'users/calories/id&timePeriod'
     - timePeriod can be 0 to retrieve all record
+
+# CHANGE LOGS
+1. As of May 22, 2022 we are attempting the conversion of this project to Typescript to increase the code reliability.
+
+# ISSUES
+1. Recent conversion of this project to Typescript has introduce error into the back-end server code. Model/Index does not has the export default db that is needed in the User file to work with import db from './User'.
+2. Recommend folking or cloning the main branch instead of the typescript branch until issue is resolved.
